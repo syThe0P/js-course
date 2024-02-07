@@ -1,4 +1,7 @@
 //Singleton - this is only created when we define object through constructor method
+//Object.create
+
+//Below method is object literals
 
 //define object
 const JSuser = {
