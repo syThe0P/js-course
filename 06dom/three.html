@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+    
+</body>
+
+<script>
+    //add values
+    function addLang(langName){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName));
+        document.querySelector('.language').appendChild(li);
+    }
+    addLang("python");
+    addLang("c++");
+    addLang("Java");
+    addLang("Ruby");
+
+    //Edit methods
+    //1
+    const firstLang = document.querySelector('li:first-child');
+    firstLang.innerHTML = "golang";  //This is not that much optimized
+    //2
+    const thirdLang = document.querySelector('li:nth-child(3)');
+    const newLi = document.createElement('li');
+    newLi.textContent = "Mojo";
+    thirdLang.replaceWith(newLi);
+    //3
+    const lastLang = document.querySelector('li:last-child');
+    lastLang.outerHTML = '<li>c#</li>';
+
+
+    //remove
+    const secondLang = document.querySelector("li:nth-child(2)");
+    secondLang.remove();
+</script>
+</html>
