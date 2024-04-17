@@ -1,0 +1,14 @@
+Fetch is just a method used now a days to do request on the server it was just implementd in node js,
+before that it was just used in browser, so earlier we used XMLhttp methodes for request but after introduction
+to fetch method to node we started using it because it is easy to use and have good syntax for that
+
+so, fetch has two things one goes to the memory allocation which allocate the memory and one is who goes to webbrowser/node
+so the step include the data allocated in memory which has two arrays one is onResolve and on is onRejection then next step
+is we do network request through webbrowser or node and depending on the situation either we get the request or we fail 
+and if it was a success then the data goes to onResolve array and through that it goes to fullfill the data allocated or if there is an error 
+pulling req it goes to the onRejection and through there it goes to the data to fullfill after the data is fullfiled then the data goes to the response 
+which is globally accesseble
+
+data, onRejection, onResolve are not accesebile they are private fields
+
+when we get a error response 404 - file not found it goes to onResolve only.
