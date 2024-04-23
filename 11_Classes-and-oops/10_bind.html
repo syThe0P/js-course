@@ -17,7 +17,7 @@
             this.server = "https://localhost:3000/"
 
             //requirement
-            document.querySelector('button').addEventListener('click', this.handleClick.bind(this));
+            document.querySelector('button').addEventListener('click', this.handleClick.bind(this)); //Here i use bind methode because without that i am getting the reference of the handle function but not getting the properties so i bind the this context with it
 
 
         }
